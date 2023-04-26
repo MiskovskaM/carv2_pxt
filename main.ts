@@ -3,9 +3,14 @@
 //pravý motor M4
 
 /*senzory 
-levý senzor:P15
-pravý senzor :P14
-uprostřed senzor: P13*/
+center:P15
+pravý senzor :P13
+levý senzor: P14*/
+
+/*
+P16 4x RGB
+ECHO oranžov
+TRIGR bílá*/
 
 let leftIdx = 0
 let rightInx = 0
