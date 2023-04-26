@@ -9,8 +9,8 @@ levý senzor: P14*/
 
 /*
 P16 4x RGB
-ECHO oranžov
-TRIGR bílá*/
+ECHO oranžová P1
+TRIGR bílá P2*/
 
 let leftIdx = 0
 let rightInx = 0
