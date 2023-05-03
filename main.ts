@@ -36,8 +36,9 @@ input.onButtonPressed(Button.AB, function () {
 
 //intervaly
 console.log(String.fromCharCode(64))
-console.log("&\fgfgdf".charCodeAt(1))
-console.log("&\fgfgdf".charCodeAt(0))
+const data = "&\fgfgdf";
+console.log(data.charCodeAt(1))
+console.log(data.charCodeAt(0))
 
 function pack(x: number, y: number, z: number): number {
     let xmod = x + 1024; //posun do kladneho intervalu
@@ -63,4 +64,5 @@ input.onButtonPressed(Button.A, function () {
 
     //radio.sendString(**);
     radio.sendNumber(pack(x, y, z));
+    
 })
