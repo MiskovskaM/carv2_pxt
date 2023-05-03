@@ -32,3 +32,22 @@ input.onButtonPressed(Button.AB, function () {
     PCAmotor.MotorStopAll()
     leftIdx = rightInx = 0
 })
+
+
+//intervaly
+function pack(x: number, y:number, z:number): number {
+    let xmod = x + 1024 //posun do kladného intervalu
+}
+ 
+input.onButtonPressed(Button.A, function() {
+    let x = 1022; // <-1024; 1023>
+    let y = -950;
+    let z = 12;
+        
+    //radio.sendString(**)
+    radio.sendNumber(pack(x, y, z))
+})
+        
+radio.onRecieveNumber(function(recievedNumber: number) {
+    basic.showNumber(recievedNumber);
+})
