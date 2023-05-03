@@ -11,7 +11,6 @@ levý senzor: P14*/
 P16 4x RGB
 ECHO oranžová P1
 TRIGR bílá P2*/
-
 let leftIdx = 0
 let rightInx = 0
 const speeds = [0, 30, 50, 70, 85, 100]
@@ -32,6 +31,7 @@ input.onButtonPressed(Button.AB, function () {
     PCAmotor.MotorStopAll()
     leftIdx = rightInx = 0
 })
+
 
 
 //intervaly
@@ -64,5 +64,4 @@ input.onButtonPressed(Button.A, function () {
 
     //radio.sendString(**);
     radio.sendNumber(pack(x, y, z));
-    
 })
