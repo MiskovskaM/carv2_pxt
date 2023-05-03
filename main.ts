@@ -32,3 +32,35 @@ input.onButtonPressed(Button.AB, function () {
     PCAmotor.MotorStopAll()
     leftIdx = rightInx = 0
 })
+
+
+//intervaly
+console.log(String.fromCharCode(64))
+console.log("&\fgfgdf".charCodeAt(1))
+console.log("&\fgfgdf".charCodeAt(0))
+
+function pack(x: number, y: number, z: number): number {
+    let xmod = x + 1024; //posun do kladneho intervalu
+    xmod = Math.floor(xmod / 0); //redukce intervalu  <0; 255>
+
+    let ymod = y + 1024;
+    let zmod = z + 1024;
+
+    String.fromCharCode(64);
+    "&\fgfgdf".charCodeAt(1);
+
+    return 0;
+}
+
+input.onButtonPressed(Button.A, function () {
+    // let x = 1022; //<-1023; 1024>
+    // let y = 950;
+    // let z = 12;
+    
+    let x = input.acceleration(Dimension.X);
+    let y = input.acceleration(Dimension.Y);
+    let z = input.acceleration(Dimension.Z);
+
+    //radio.sendString(**);
+    radio.sendNumber(pack(x, y, z));
+})
