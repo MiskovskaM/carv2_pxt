@@ -35,22 +35,20 @@ input.onButtonPressed(Button.AB, function () {
 
 
 //intervaly
-console.log(String.fromCharCode(64))
-const data = "&\fgfgdf";
-console.log(data.charCodeAt(1))
-console.log(data.charCodeAt(0))
+console.log(String.fromCharCode(243))
+console.log(data.charCodeAt(243).charCodeAt(0))
 
-function pack(x: number, y: number, z: number): number {
-    let xmod = x + 1024; //posun do kladneho intervalu
-    xmod = Math.floor(xmod / 0); //redukce intervalu  <0; 255>
+function pack(cisla: [number]): string {
+    for (let i = 0; i < cisla.length; i++) {
+        console.log(cisla[i]);
+        // let xmod = x + 1024; //posun do kladneho intervalu
+        // xmod = Math.floor(xmod / 0); //redukce intervalu  <0; 255>
+    }
 
     let ymod = y + 1024;
     let zmod = z + 1024;
 
-    String.fromCharCode(64);
-    "&\fgfgdf".charCodeAt(1);
-
-    return 0;
+    //return String.fromCharCode(xmod)
 }
 
 input.onButtonPressed(Button.A, function () {
@@ -63,5 +61,9 @@ input.onButtonPressed(Button.A, function () {
     let z = input.acceleration(Dimension.Z);
 
     //radio.sendString(**);
-    radio.sendNumber(pack(x, y, z));
+    radio.sendNumber(pack([x, y, z]));
+})
+
+radio.onReceivedNumber(function(recievedNumber: number) {
+    basic.showNumber(recievedNumber);
 })
