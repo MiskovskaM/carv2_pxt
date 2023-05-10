@@ -12,7 +12,50 @@ P16 4x RGB
 ECHO oranžová P1
 TRIGR bílá P2*/
 
-radio.setGroup(22)
-radio.setFrequencyBand(6)
+// radio.setGroup(22)
+// radio.setFrequencyBand(6)
 
 
+
+    let leftIdx = 0
+    let rightInx = 0
+    const speeds = [0, 30, 50, 70, 85, 100]
+    // input.onButtonPressed(Button.A, function () {
+    //     PCAmotor.MotorRun(PCAmotor.Motors.M1,
+    //         speeds[++leftIdx % speeds.length])
+    //     basic.showNumber(speeds[leftIdx])
+    //     basic.clearScreen()
+    // })
+
+    // input.onButtonPressed(Button.B, function () {
+    //     PCAmotor.MotorRun(PCAmotor.Motors.M4,
+    //         speeds[++rightInx % speeds.length])
+    //     basic.showNumber(speeds[rightInx])
+    //     basic.clearScreen()
+    // })
+    // input.onButtonPressed(Button.AB, function () {
+    //     PCAmotor.MotorStopAll()
+    //     leftIdx = rightInx = 0
+    // })
+
+
+
+// input.logoIsPressed() ({
+
+//     PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[++leftIdx % speeds.length] )
+//     PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[++rightInx % speeds.length] )
+//     basic.pause(2000)
+//     PCAmotor.MotorStop(PCAmotor.Motors.M1)
+//     PCAmotor.MotorStop(PCAmotor.Motors.M4)
+    
+// })
+
+input.onButtonPressed(Button.AB, function () {
+    PCAmotor.MotorRun(PCAmotor.Motors.M1, 255)
+    PCAmotor.MotorRun(PCAmotor.Motors.M4, 150)
+})
+
+input.onButtonPressed(Button.A, function () {
+        PCAmotor.MotorStopAll()
+         leftIdx = rightInx = 0
+     })
