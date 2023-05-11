@@ -43,14 +43,46 @@ function car_motor(lw: number = 0, rw: number = 0) {
     PCAmotor.MotorRun(PCAmotor.Motors.M4, ur)
 }
 
-function dopredu() {
-    PCAmotor.MotorRun(PCAmotor.Motors. M1 && M4)
-    basic.pause(4000);
-    PCAmotor.MotorStopAll;
+// function dopredu() {
+//     PCAmotor.MotorRun(PCAmotor.Motors. M1 && M4)
+//     basic.pause(4000);
+//     PCAmotor.MotorStopAll;
+// }
+
+
+
+//jizda
+radio.setGroup(22)
+radio.setFrequencyBand(6)
+
+const speeds = [0, 50, 100, 255];
+let levyIndex = 0;
+let pravyIndex = 0;
+let x = 0;
+let y = 0;
+let a = 0;
+let b = 0;
+let l = 0;
+
+radio.onReceivedString(function(receivedString: string) {
+    receivedString.split();
+})
+
+if (l = 1) {
+    PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[2])
+    PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[2])
 }
 
+if (a = 1) {
+    PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[2])
+    PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[0])
+} else {
+    
+}
 
-input.onButtonPressed(Button.AB, function () {(
-    basic.showString("S")
-    dopredu
-})
+if (b = 1) {
+    PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[2])
+    PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[0])
+} else {
+
+}
