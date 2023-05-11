@@ -65,24 +65,33 @@ let b = 0;
 let l = 0;
 
 radio.onReceivedString(function(receivedString: string) {
-    receivedString.split();
+    let array = [];
+
+    array.push(recievedString.charCodeAt(0)) // znak 1 - dimenze x
+    array.push(recievedString.charCodeAt(1)) // znak 2 - dimenze y
+
+    for (let i = 2; i <= 7; i++) {
+        array.push(parseInt(recievedString.charAt(i)));
+    }
+}
+
+basic.forever(function() {
+    if (array[4] == 1) {
+        PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[2])
+        PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[2])
+    }
+
+    if (array[2] == 1) {
+        PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[2])
+        PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[0])
+    } else {
+
+    }
+
+    if (array[3] == 1) {
+        PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[2])
+        PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[0])
+    } else {
+
+    }
 })
-
-if (l = 1) {
-    PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[2])
-    PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[2])
-}
-
-if (a = 1) {
-    PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[2])
-    PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[0])
-} else {
-    
-}
-
-if (b = 1) {
-    PCAmotor.MotorRun(PCAmotor.Motors.M1, speeds[2])
-    PCAmotor.MotorRun(PCAmotor.Motors.M4, speeds[0])
-} else {
-
-}
