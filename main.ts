@@ -19,9 +19,14 @@
 radio.setGroup(54);
 radio.setFrequencyBand(7);
 
+let osaX = 0;
+let osaY = 0;
 let btnA = 0;
 let btnB = 0;
 let logo = 0;
+let p0 = 0;
+let p1 = 0;
+let p2 = 0;
 
 radio.onReceivedString(function (receivedString: string) {
     let arr = [];
@@ -39,9 +44,14 @@ radio.onReceivedString(function (receivedString: string) {
         arr.push(parseInt(receivedString.charAt(i)));
     }
 
+    osaX = arr[0];
+    osaY = arr[1];
     btnA = arr[2];
     btnB = arr[3];
     logo = arr[4];
+    p0 = arr[5];
+    p1 = arr[6];
+    p2 = arr[7];
 })
 
 basic.forever(function () {
