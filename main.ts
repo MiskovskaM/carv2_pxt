@@ -49,11 +49,9 @@ function car_motor(lw: number = 0, rw: number = 0) {
 //     PCAmotor.MotorStopAll;
 // }
 
-
-
 //jizda
-radio.setGroup(22)
-radio.setFrequencyBand(6)
+radio.setGroup(22);
+radio.setFrequencyBand(6);
 
 const speeds = [0, 50, 100, 255];
 let levyIndex = 0;
