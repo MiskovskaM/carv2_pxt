@@ -25,6 +25,7 @@ let logo = 0;
 
 radio.onReceivedString(function (receivedString: string) {
     let arr = [];
+    
     arr.push(receivedString.charCodeAt(0)); // znak 1 - dimenze x
     arr.push(receivedString.charCodeAt(1)); // znak 2 - dimenze y
     arr.push(receivedString.charCodeAt(2)); // znak 3 - tlacitko a
@@ -37,6 +38,7 @@ radio.onReceivedString(function (receivedString: string) {
     for (let i = 2; i <= 7; i++) {
         arr.push(parseInt(receivedString.charAt(i)));
     }
+
     btnA = arr[2];
     btnB = arr[3];
     logo = arr[4];
