@@ -18,18 +18,18 @@ radio.onReceivedString(function (receivedString: string) {
 })
 
 basic.forever(function () {
-    if (y > 200) { //ověřit a poladit úhel, nejsem si jistej
-        PCAmotor.MotorRun(PCAmotor.Motors.M1, 250)
-        PCAmotor.MotorRun(PCAmotor.Motors.M4, -250)
-    } else if (y < -200) { //ověřit a poladit úhel, nejsem si jistej
-        PCAmotor.MotorRun(PCAmotor.Motors.M1, -250)
-        PCAmotor.MotorRun(PCAmotor.Motors.M4, 250)
-    } else if (x > 200) { //ověřit a poladit úhel, nejsem si jistej
-        PCAmotor.MotorRun(PCAmotor.Motors.M1, 250)
-        PCAmotor.MotorRun(PCAmotor.Motors.M4, 250)
-    } else if (x < -200) { //ověřit a poladit úhel, nejsem si jistej
-        PCAmotor.MotorRun(PCAmotor.Motors.M1, -250)
-        PCAmotor.MotorRun(PCAmotor.Motors.M4, -250)
+    if (y > 200) {
+        PCAmotor.MotorRun(PCAmotor.Motors.M1, 150)
+        PCAmotor.MotorRun(PCAmotor.Motors.M4, -150)
+    } else if (y < -200) { 
+        PCAmotor.MotorRun(PCAmotor.Motors.M1, -150)
+        PCAmotor.MotorRun(PCAmotor.Motors.M4, 150)
+    } else if (x > 200) { 
+        PCAmotor.MotorRun(PCAmotor.Motors.M1, 150)
+        PCAmotor.MotorRun(PCAmotor.Motors.M4, 150)
+    } else if (x < -200) {
+        PCAmotor.MotorRun(PCAmotor.Motors.M1, -150)
+        PCAmotor.MotorRun(PCAmotor.Motors.M4, -150)
     } else {
         PCAmotor.MotorStop(PCAmotor.Motors.M1)
         PCAmotor.MotorStop(PCAmotor.Motors.M4)
