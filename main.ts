@@ -38,39 +38,4 @@ radio.onReceivedString(function (receivedString: string) {
             PCAmotor.MotorStop(PCAmotor.Motors.M4);
         }
     }
-
-    // basic.forever(function () {
-//     if (x > 100) {
-//         PCAmotor.MotorRun(PCAmotor.Motors.M1, 150);
-//         PCAmotor.MotorRun(PCAmotor.Motors.M4, -150);
-//     } else if (x < -100) { 
-//         PCAmotor.MotorRun(PCAmotor.Motors.M1, -150);
-//         PCAmotor.MotorRun(PCAmotor.Motors.M4, 150);
-//     } else if (y < -100) { 
-//         PCAmotor.MotorRun(PCAmotor.Motors.M1, 150);
-//         PCAmotor.MotorRun(PCAmotor.Motors.M4, 150);
-//     } else if (y > 100) {
-//         PCAmotor.MotorRun(PCAmotor.Motors.M1, -150);
-//         PCAmotor.MotorRun(PCAmotor.Motors.M4, -150);
-//     } else {
-//         // PCAmotor.MotorStop(PCAmotor.Motors.M1);
-//         // PCAmotor.MotorStop(PCAmotor.Motors.M4);
-//         PCAmotor.MotorRun(PCAmotor.Motors.M1, 0);
-//         PCAmotor.MotorRun(PCAmotor.Motors.M4, 0);
-//     }
-// })
-
-// basic.forever(function() {
-//     if (y > 0) {
-//         PCAmotor.MotorRun(PCAmotor.Motors.M1, 100);
-//         PCAmotor.MotorRun(PCAmotor.Motors.M4, 100);
-//     } else if (y < 0) {
-//         PCAmotor.MotorRun(PCAmotor.Motors.M1, -100);
-//         PCAmotor.MotorRun(PCAmotor.Motors.M4, -100);
-//     } else {
-//         PCAmotor.MotorStop(PCAmotor.Motors.M1);
-//         PCAmotor.MotorStop(PCAmotor.Motors.M4);
-//     }
-// })
-
 })
